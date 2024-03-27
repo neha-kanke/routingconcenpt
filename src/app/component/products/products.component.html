@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <button class="btn btn-success my-3" [routerLink]='["add-form"]'>Add  New product</button>
+            <!-- <button class="btn btn-success my-3" [routerLink]='["/Home"]'>back to home</button> -->
+            <ul class="list-group">
+            <li class="list-group-item" *ngFor="let prod of prodarray"
+            [routerLink]="['/products',prod.pId]">
+            {{prod.pName}}
+            </li>
+           </ul>
+        </div>
+        <div class="col-md-8">
+
+        </div>
+    </div>
+</div>
